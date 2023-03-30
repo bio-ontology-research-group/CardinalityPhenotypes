@@ -1,0 +1,759 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#"
+     xml:base="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#has_member -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#has_member">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#has_part"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#member-of"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#has_modifier -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#has_modifier"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#has_part -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#has_part">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#part_of"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#has_quality -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#has_quality"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#inheres-in -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#inheres-in"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#member-of -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#member-of">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#part_of"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#part_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#part_of"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#phenotype_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#phenotype_of">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#B_Cell -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#B_Cell">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#Lymphocyte"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#member-of"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#Collection_of_B_Cells"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#Cell -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#Cell">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#member-of"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#Collection_of_Cells"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#Collection_of_B_Cells -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#Collection_of_B_Cells">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#Collections"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#has_member"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#B_Cell"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#Collection_of_Cells -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#Collection_of_Cells">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#Collections"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#has_member"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#Cell"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#Collection_of_Lymphocytes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#Collection_of_Lymphocytes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#Collections"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#has_member"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#Lymphocyte"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#Collection_of_T_Cells -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#Collection_of_T_Cells">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#Collections"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#has_member"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#T_Cell"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#Collections -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#Collections"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#Lymphocyte -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#Lymphocyte">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#Cell"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#member-of"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#Collection_of_Lymphocytes"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#T_Cell -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#T_Cell">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#Lymphocyte"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#member-of"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#Collection_of_T_Cells"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#abnormal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#abnormal">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:complementOf rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#normal"/>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#quality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#abnormality_of_B_cells -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#abnormality_of_B_cells">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#has_part"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#has_modifier"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#abnormal"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#inheres-in"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#Collection_of_B_Cells"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#abnormality_of_T_cells -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#abnormality_of_T_cells">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#has_part"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#has_modifier"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#abnormal"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#inheres-in"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#Collection_of_T_Cells"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#abnormality_of_cell -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#abnormality_of_cell">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#has_part"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#has_modifier"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#abnormal"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#inheres-in"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#Collection_of_Cells"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#abnormality_of_collections -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#abnormality_of_collections">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#has_part"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#has_modifier"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#abnormal"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#inheres-in"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#Collections"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#abnormality_of_lymphocytes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#abnormality_of_lymphocytes">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#has_part"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#has_modifier"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#abnormal"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#inheres-in"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#Collection_of_Lymphocytes"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#absence_of_B_cells -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#absence_of_B_cells">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#has_part"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#normal"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#inheres-in"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#B_Cell"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#has_part"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#quality"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#has_modifier"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#abnormal"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#inheres-in"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#Collection_of_B_Cells"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#has_member"/>
+                                                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#absence_of_T_cells -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#absence_of_T_cells">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#has_part"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#quality"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#inheres-in"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#T_Cell"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#has_part"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#quality"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#has_modifier"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#abnormal"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#inheres-in"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#Collection_of_T_Cells"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#has_member"/>
+                                                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#absence_of_cells -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#absence_of_cells">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#has_part"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#quality"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#inheres-in"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#Cell"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#has_part"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#quality"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#has_modifier"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#abnormal"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#inheres-in"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#Collection_of_Cells"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#has_member"/>
+                                                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#absence_of_lymphocytes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#absence_of_lymphocytes">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#has_part"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#quality"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#inheres-in"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#Lymphocyte"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#has_part"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#quality"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#has_modifier"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#abnormal"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#inheres-in"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#Collection_of_Lymphocytes"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#has_member"/>
+                                                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#decreased_amount -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#decreased_amount">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#quality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#decreased_amount_of_B_cells -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#decreased_amount_of_B_cells">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#has_part"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#decreased_amount"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#has_modifier"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#abnormal"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#inheres-in"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#Collection_of_B_Cells"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#decreased_amount_of_Lymphocytes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#decreased_amount_of_Lymphocytes">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#has_part"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#decreased_amount"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#has_modifier"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#abnormal"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#inheres-in"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#Collection_of_Lymphocytes"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#decreased_amount_of_T_cells -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#decreased_amount_of_T_cells">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#has_part"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#decreased_amount"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#has_modifier"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#abnormal"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#inheres-in"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#Collection_of_T_Cells"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#decreased_amount_of_cells -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#decreased_amount_of_cells">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#has_part"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#decreased_amount"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#has_modifier"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#abnormal"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#inheres-in"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#Collection_of_Cells"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#decreased_amount_of_collection_of_cells -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#decreased_amount_of_collection_of_cells">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#has_part"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#decreased_amount"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#has_modifier"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#abnormal"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#inheres-in"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#Collections"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#normal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#normal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#quality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#phenotype_abnormality -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#phenotype_abnormality">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#has_part"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#has_modifier"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#abnormal"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#quality -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alghsm0a/ontologies/2022/11/CP.owl#quality"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
